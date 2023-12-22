@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy
+pip install scikit-learn==<desired_version>
 #from sklearn.tree import plot_tree
 
 st.write("# Simple Iris Flower Prediction App")
