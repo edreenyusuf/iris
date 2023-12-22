@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy
-from sklearn.tree import plot_tree
+from sklearn.tree
+##import plot_tree
 
 st.write("# Simple Iris Flower Prediction App")
 st.write("This app predicts the **Iris flower** type!")
@@ -24,15 +25,15 @@ def user_input_features():
 df = user_input_features()
 
 st.subheader('User Input parameters')
-st.write(df)
+#st.write(df)
 
-loaded_model = pickle.load(open("Irisdtexpv2.h5", "rb")) #rb: read binary
+#loaded_model = pickle.load(open("Irisdtexpv2.h5", "rb")) #rb: read binary
 
-prediction = loaded_model.predict(df.values)  # or loaded_model.predict(df.to_numpy())
-prediction_proba = loaded_model.predict_proba(df.values)
+#prediction = loaded_model.predict(df.values)  # or loaded_model.predict(df.to_numpy())
+#prediction_proba = loaded_model.predict_proba(df.values)
 
-st.subheader('Class labels and their corresponding index number')
+#st.subheader('Class labels and their corresponding index number')
 #st.write(Y.unique())
 
-st.subheader('Prediction')
-st.write(prediction)
+#st.subheader('Prediction')
+#st.write(prediction)
