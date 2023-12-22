@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy
-from sklearn.tree
+from sklearn
+##.tree
 ##import plot_tree
 
 st.write("# Simple Iris Flower Prediction App")
