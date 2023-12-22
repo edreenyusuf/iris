@@ -24,7 +24,7 @@ def user_input_features():
 df = user_input_features()
 
 st.subheader('User Input parameters')
-#st.write(df)
+st.write(df)
 
 #loaded_model = pickle.load(open("Irisdtexpv2.h5", "rb")) #rb: read binary
 
