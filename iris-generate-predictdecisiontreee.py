@@ -25,10 +25,10 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-modeldt = pickle.load(open("Irisdtexpv2.h5", "rb")) #rb: read binary
+loaded_model = pickle.load(open("Irisdtexpv2.h5", "rb")) #rb: read binary
 
-prediction = modeldt.predict(df)
-prediction_proba = modeldt.predict_proba(df)
+prediction = loaded_model.predict(df)
+prediction_proba = loaded_model.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
 #st.write(Y.unique())
