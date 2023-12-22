@@ -26,7 +26,7 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-loaded_model = pickle.load(open("irisdt1.h5", "rb")) #rb: read binary
+loaded_model = pickle.load(open("IrisDTree.h5", "rb")) #rb: read binary
 
-prediction = loaded_model.predict(df.values)  # or loaded_model.predict(df.to_numpy())
-prediction_proba = loaded_model.predict_proba(df.values)
+#prediction = loaded_model.predict(df.values)  # or loaded_model.predict(df.to_numpy())
+#prediction_proba = loaded_model.predict_proba(df.values)
