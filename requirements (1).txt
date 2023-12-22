@@ -1,8 +1,0 @@
-altair
-streamlit
-pandas
-seaborn
-scikit-learn
-numpy
-keras
-tensorflow
