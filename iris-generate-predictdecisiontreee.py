@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy
-import tree
-import plot_tree
+from sklearn.tree import plot_tree
 
 st.write("# Simple Iris Flower Prediction App")
 st.write("This app predicts the **Iris flower** type!")
@@ -29,8 +28,8 @@ st.write(df)
 
 loaded_model = pickle.load(open("Irisdtexpv2.h5", "rb")) #rb: read binary
 
-prediction = loaded_model.predict(df)
-prediction_proba = loaded_model.predict_proba(df)
+prediction = loaded_model.predict(df.values)  # or loaded_model.predict(df.to_numpy())
+prediction_proba = loaded_model.predict_proba(df.values)
 
 st.subheader('Class labels and their corresponding index number')
 #st.write(Y.unique())
