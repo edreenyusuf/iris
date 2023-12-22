@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
+import pickle
+import numpy
 from sklearn.tree import plot_tree
 
 st.write("# Simple Iris Flower Prediction App")
@@ -25,17 +26,13 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-data = sns.load_dataset('iris')
-X = data.drop(['species'],axis=1)
-Y = data.species.copy()
-
-modeldt = pickle.load(open("Iris.h5", "rb")) #rb: read binary
+modeldt = pickle.load(open("Irisdtexpv2.h5", "rb")) #rb: read binary
 
 prediction = modeldt.predict(df)
 prediction_proba = modeldt.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(Y.unique())
+#st.write(Y.unique())
 
 st.subheader('Prediction')
 st.write(prediction)
