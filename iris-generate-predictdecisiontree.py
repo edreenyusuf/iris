@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy
-pip install scikit-learn==<desired_version>
-#from sklearn.tree import plot_tree
+from sklearn.tree import plot_tree
 
 st.write("# Simple Iris Flower Prediction App")
 st.write("This app predicts the **Iris flower** type!")
@@ -27,4 +26,7 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-loaded_model = pickle.load(open("irisdt1.h5", "rb"))
+loaded_model = pickle.load(open("irisdt1.h5", "rb")) #rb: read binary
+
+prediction = loaded_model.predict(df.values)  # or loaded_model.predict(df.to_numpy())
+prediction_proba = loaded_model.predict_proba(df.values)
